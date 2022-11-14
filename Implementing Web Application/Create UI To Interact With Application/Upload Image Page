@@ -1,1 +1,72 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            background-color: #534d6b;
+        }
+        h2 {
+            background-color: white;
+            height:90px;
+            color:black;
+            font-size: 75px;
+        }
+        input{
+            background-color: #b4547c;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            margin-left: 60px;
+           margin-top: -30px;
+        }
+        img{
+            border: 2px solid red;
+            margin-top: -500px;
+            margin-left: 10px;
+        }
+        .about{
+            width: 320px;
+           border: 15px solid gray;
+           padding: 50px;
+           margin: 20px;
+           margin-left:950px;
+           color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <h2 class="mt-5"><center>Nutrition Assistant</center></h2>
+                <div id="myform">
+                    <form method="post" action="{{ url_for('tasks') }}">
+                        <center>
+                        <input type="submit" value="Stop/Start" name="stop" />
+                        <input type="submit" value="Capture" name="click" />
+                        <input type="submit" value="Detect" name="detect" />
+                        </center>
+                    </form>
+                </div>
+                <div class="about">By identifying the supplied food image, this model attempts to create a web application that automatically calculates food nutritional value. For precise food recognition and to determine the nutritional value of the recognized item, our solution uses a food detection model and food <APIs class="br">
+                    <ul>
+                        <li>First click on start/stop. </li>
+                        <li>Then click on capture to take an image for which food item you need to know the nutritional values. </li>
+                        <li>Click on detect button to view the detailed list of nutritional value. </li>
+                    </ul>
+                </APIs></div>
+                <img src="{{ url_for('video_feed') }}" height="50%">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
