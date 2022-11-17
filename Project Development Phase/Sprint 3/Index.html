@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +7,19 @@
     <title>Document</title>
     <style>
         .row {
-            background-color: gray;
+            background-color: #534d6b;
         }
 
         h2 {
-            background-color: #8f405c;
-            height:80px;
+            background-color: white;
+            height: 80px;
             font-size: 75px;
         }
 
-        input{
-
-            background-color: #420e58;
+        input {
+            background-color: #b4547c;
             border: none;
-            color: white;
+            color: black;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -29,33 +27,31 @@
             font-size: 16px;
             border-radius: 12px;
             margin-left: 60px;
-           margin-top: -30px;
+            margin-top: -30px;
         }
-        img{
+
+        img {
             border: 2px solid red;
             margin-top: -500px;
             margin-left: 10px;
-                 
         }
-        .about{
-            width: 300px;
-           border: 15px solid green;
-           padding: 50px;
-           margin: 20px;
-           margin-left:700px;
-            
-           
 
+        .about {
+            width: 300px;
+            border: 15px solid gray;
+            padding: 50px;
+            margin: 20px;
+            margin-left: 950px;
+            color: white;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="row">
             <div class="col-lg-8  offset-lg-2">
 
-                <h2 class="mt-5">Nutritions Assistant</h2>
+                <Center><h2 class="mt-5">Nutrition Assistant</h2></Center>
                 <div id="myform">
                     <form method="post" action="{{ url_for('tasks') }}">
                         <input type="submit" value="Stop/Start" name="stop" />
@@ -63,24 +59,20 @@
                         <input type="submit" value="Detect" name="detect" />
                     </form>
                 </div>
-                <div class="about">By identifying the supplied food image, this project attempts to create a web application that automatically calculates food qualities like ingredients and nutritional value. For precise food recognition and to determine the nutritional value of the recognized item, our solution uses a food detection model and food <APIs class="br">
-                    <ol>
-                        <li>First click on stop and start for starting </li>
-                        <li>then click on capture to take a image which nutrients you want to know </li>
-                        <li>click on detect button for see the nutrients list</li>
-                        <br>
-                        <br>
-                        <li>The health issues most of the time depends on our diet and nutrition</li>
-                      </ol>
-                </APIs></div>
-        
-                <img src="{{ url_for('video_feed') }}" height="50%">
-
-         
-
+                <div class="about">
+                    By identifying the supplied food image, this project attempts to create a web application that automatically calculates food qualities like nutritional value. For precise food recognition and to determine the nutritional value of the recognized item, our solution uses a food detection model and food <APIs class="br">
+                        <ul>
+                            <li>First click on start/stop. </li>
+                            <li>Then click on capture to take an image for which food item you need to know the nutritional values. </li>
+                            <li>Click on detect button to view the detailed list of nutritional value.</li>
+                           
+                            <li>The health issues most of the time depends on our diet and nutrition</li>
+                        </ul>
+                    </APIs>
+                </div>
+                <img src="{{ url_for('video_feed') }}" >
             </div>
         </div>
     </div>
 </body>
-
 </html>
