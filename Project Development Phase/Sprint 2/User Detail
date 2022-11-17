@@ -13,7 +13,8 @@
   <input type="number" id="weight" name="weights"><br><br>
   <label for="ages"><b>Age:</b></label>
   <input type="number" id="ages" name="ages"><br><br>
-<input type="button" onclick="formSubmit()" value="Submit">
+ <a href="index.html">
+<input type="button" onclick="formSubmit()" value="Submit"></a>
 </form>
 </center>
 </body>
