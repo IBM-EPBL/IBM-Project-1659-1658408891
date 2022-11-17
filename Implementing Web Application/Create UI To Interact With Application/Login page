@@ -10,10 +10,10 @@ required></br></br>
  <label for="psw"><b>Password</b></label>
  <input type="password" placeholder="Enter Password" name="psw" id="psw" 
 required></br></br>
- <button type="submit" class="registerbtn"><a href="index.html">Login</a></button></br>
+ <button type="submit" class="registerbtn"><a href="user detail.html">Login</a></button></br>
  </div>
  <div class="container signin">
- <h4>Not Register?<a href="register.html">Register</a></h4>
+ 
  </div>
 </body>
 </form>
